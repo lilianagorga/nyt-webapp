@@ -21,4 +21,4 @@ After cloning the repository, you can run the following command to start the app
 * Redux
 
 ## Live Deploy
-* The application will be accessible at https://https://nyt-webapp.netlify.app
+* The application will be accessible at https://nyt-webapp.netlify.app
