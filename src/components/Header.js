@@ -138,7 +138,8 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="stocks">
-                    <p>S&P 500<span>+2% &uarr;</span></p>
+                    <span>S&P 500<span>
+                    </span>+2% &uarr;</span>
                   </div>
                 </div>
                 <hr className='hr-1-desktop'/>

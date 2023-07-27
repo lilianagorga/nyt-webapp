@@ -153,8 +153,9 @@ hr {
   border-top: 1px solid black;
 }
 
-.stocks p > span {
+span:nth-of-type(1) {
   background-image: none;
+  padding-left: 0;
 }
 
 .header.scrolled .header-top-row,
