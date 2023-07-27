@@ -1,18 +1,37 @@
-div > span:nth-of-type(1) {
-  padding-left: 0;
-  background-image: none;
-  font-weight: bold;
-  color: black;
-}
-
-span {
-  color: grey;
-  padding-right: 1rem;
-}
-
 .footer-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-container > span {
+  color: grey;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-container > span:first-of-type {
+  padding-left: 0;
+  background-image: none;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-container > span:first-of-type {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-container > span:not(:first-of-type) {
+    flex-basis: fill;
+    padding-right: 0.7rem;
+    font-size: 12px;
+  }
 }
 
