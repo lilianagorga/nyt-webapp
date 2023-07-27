@@ -1,0 +1,70 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p, span {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+span:nth-of-type(1) {
+  background-image: url('data:image/svg+xml,%3Csvg width="3" height="3" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1.5" cy="1.5" r="1" fill="gray" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: 5px;
+  background-position: 0 50%;
+  padding-left: 10px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover h3 {
+  color: darkgray;
+}
+
+footer > p {
+  font-weight: bold;
+}
+
+@media (max-width: 1300px) {
+  .main-container {
+    width: 95%;
+  }
+}

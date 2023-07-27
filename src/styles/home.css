@@ -1,0 +1,147 @@
+.article-list-container {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 20px;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.main-article-group {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 20px;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.main-article-inner-group {
+  justify-self: start;
+}
+
+.main-article-inner-group section:nth-of-type(2) {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.main-article-inner-group section:nth-of-type(1) {
+  padding-bottom: 1rem;
+}
+
+.main-article-inner-picture {
+  justify-self: end;
+}
+
+.side-article-card:last-child,
+.main-article-group:last-child {
+  border: none;
+}
+
+.side-article-list {
+  border-left: 1px solid #ddd;
+}
+
+.side-article-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.side-article-inner-group {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-self: end;
+  order: 2;
+} 
+
+.side-article-inner-picture {
+  justify-self: start;
+  order: 1;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .article-list-container {
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .main-article-group {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.7rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .main-article-inner-group {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .main-article-inner-picture {
+    padding-top: 0.8rem;
+  }
+
+  .side-article-card {
+    margin-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .side-article-inner-group {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .main-article-inner-group h3,
+  .side-article-inner-group h3 {
+    font-size: 16px;
+  }
+
+  .main-article-inner-group p,
+  .side-article-inner-group p {
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-list-container {
+    gap: 5px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .main-article-group {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.5rem;
+  }
+
+  .main-article-inner-group {
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .main-article-inner-picture {
+    padding-top: 0.5rem;
+  }
+
+  .side-article-card {
+    margin-left: 0;
+  }
+
+  .side-article-inner-group {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .main-article-inner-group h3,
+  .side-article-inner-group h3 {
+    font-size: 14px;
+  }
+
+  .main-article-inner-group p,
+  .side-article-inner-group p {
+    line-height: 1.3;
+  }
+}
