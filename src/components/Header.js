@@ -12,7 +12,7 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+  
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
