@@ -28,18 +28,21 @@ const Header = () => {
     setIsMobile(isMobileView);
   };
 
- const handleSubmit = (e) => {
-  e.preventDefault();
-  if (text.trim() !== '') {
-    if (text.trim().toLowerCase() === 'home') {
-      window.location.href = '/';
-    } else {
-      window.location.href = `/section/${text}`;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (text.trim() !== '') {
+      if (text.trim().toLowerCase() === 'home') {
+        window.location.href = '/';
+      } else {
+        window.location.href = `/section/${text}`;
+      }
     }
   }
-}
 
   useEffect(() => {
+    
+    handleResize();
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
     return () => {
@@ -50,6 +53,7 @@ const Header = () => {
 
   const locale = 'en';
   const currentDate = new Date();
+
   return (
     <IntlProvider locale={locale}>
       <header className={`header ${isMenuOpen && isScrolled ? 'active' : ''} ${isScrolled ? 'scrolled' : ''} ${isMobile ? 'mobile' : ''}`}>
@@ -67,12 +71,12 @@ const Header = () => {
                     <div className="close-icon" onClick={toggleMenu}>
                       <FaTimes />
                     </div>
-                     <div>
-                       <form onSubmit={handleSubmit} className="search-form">
-                         <input type='text' placeholder='e.g politics' onChange={(e) => setText(e.target.value)} />
-                         <button type='submit'>Search</button>
-                       </form>
-                       </div>
+                    <div>
+                      <form onSubmit={handleSubmit} className='search-form'>
+                        <input type='text' placeholder='e.g politics' onChange={(e) => setText(e.target.value)} />
+                        <button type='submit'>Search</button>
+                      </form>
+                      </div>
                     <ul>
                       {menuItems.map((menuItem, index) => (
                         <li key={index}>
