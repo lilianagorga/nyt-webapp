@@ -5,7 +5,6 @@ import ArticleListHome from '../components/ArticleListHome';
 const Home = () => {
   const [articles, setArticles] = useState([]);
   const key = process.env.REACT_APP_NYT_API_KEY;
-  console.log('key', key)
 
   useEffect(() => {
     const fetchData = async () => {
