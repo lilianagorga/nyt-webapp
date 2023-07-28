@@ -40,7 +40,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    
+
     handleResize();
 
     window.addEventListener('scroll', handleScroll);
@@ -73,8 +73,8 @@ const Header = () => {
                     </div>
                     <div>
                       <form onSubmit={handleSubmit} className='search-form'>
-                        <input type='text' placeholder='e.g politics' onChange={(e) => setText(e.target.value)} />
-                        <button type='submit'>Search</button>
+                        <input type='text' placeholder='SEARCH' onChange={(e) => setText(e.target.value)} />
+                        <button type='submit'>GO</button>
                       </form>
                       </div>
                     <ul>
