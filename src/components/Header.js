@@ -12,6 +12,7 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [text, setText] = useState('');
   
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -26,6 +27,17 @@ const Header = () => {
     const isMobileView = window.innerWidth <= 1024;
     setIsMobile(isMobileView);
   };
+
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  if (text.trim() !== '') {
+    if (text.trim().toLowerCase() === 'home') {
+      window.location.href = '/';
+    } else {
+      window.location.href = `/section/${text}`;
+    }
+  }
+}
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -55,6 +67,12 @@ const Header = () => {
                     <div className="close-icon" onClick={toggleMenu}>
                       <FaTimes />
                     </div>
+                     <div>
+                       <form onSubmit={handleSubmit} className="search-form">
+                         <input type='text' placeholder='e.g politics' onChange={(e) => setText(e.target.value)} />
+                         <button type='submit'>Search</button>
+                       </form>
+                       </div>
                     <ul>
                       {menuItems.map((menuItem, index) => (
                         <li key={index}>
