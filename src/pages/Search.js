@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
-import SearchList from '../components/SearchList';
+import SearchCard from '../components/SearchCard';
 
 
 
@@ -33,7 +33,7 @@ const Search = () => {
   return (
       <div>
         <Header searchText={(text) => setTerm(text)} />
-        <SearchList articles={articles} />
+        <SearchCard articles={articles} />
       </div>
   );
 };

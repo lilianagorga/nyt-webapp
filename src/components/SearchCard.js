@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchList = ({ articles }) => {
+const SearchCard = ({ articles }) => {
   return (
     <div>
       {articles.map((article) => {
@@ -23,4 +23,4 @@ const SearchList = ({ articles }) => {
   );
 };
 
-export default SearchList;
+export default SearchCard;
