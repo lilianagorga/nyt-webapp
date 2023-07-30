@@ -112,27 +112,21 @@
   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.5);
   overflow: auto;
   transition: transform 0.3s ease-in-out;
-  z-index: 999;
 }
 
 .menu-list-desktop {
   width: 15.625rem;
   transform: translateX(-100%);
   border: 1px solid grey;
-  height: 100vh;
-  z-index: 999;
 }
 
 .menu-list.active {
   transform: translateX(0);
-  height: 100vh;
-  z-index: 999;
 }
 
 .menu-list ul {
   padding: 1.25rem;
   height: 100vh;
-  z-index: 999;
 }
 
 .menu-list li {
@@ -234,11 +228,6 @@ body.menu-open {
   .header-mobile {
     display: flex;
     flex-direction: column;
-  }
-
-  .header-mobile .menu-list-mobile.active {
-    height: 100vh;
-    z-index: 999;
   }
 
   .header-mobile-top, .header-mobile-bottom {

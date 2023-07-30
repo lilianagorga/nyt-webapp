@@ -20,6 +20,11 @@ const Header = () => {
     body.classList.toggle('menu-open', !isMenuOpen);
   };
 
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.remove('menu-open');
+  }, []);
+
   const handleScroll = () => {
     const isHeaderScrolled = window.scrollY > 0;
     setScrolled(isHeaderScrolled);
@@ -52,12 +57,6 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  useEffect(() => {
-    const body = document.querySelector('body');
-    body.classList.remove('menu-open');
-  }, []);
-  
 
   const locale = 'en';
   const currentDate = new Date();
@@ -123,10 +122,7 @@ const Header = () => {
                 <div className="header-top-row">
                   <div className="header-top-left">
                     <div className="menu-container">
-                      <div
-                        className={`menu-button ${isMenuOpen ? "active" : ""}`}
-                        onClick={toggleMenu}
-                      >
+                      <div className={`menu-button ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
                         <div className="menu-icon"></div>
                         <div className="menu-icon"></div>
                         <div className="menu-icon"></div>
