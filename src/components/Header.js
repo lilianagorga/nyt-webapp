@@ -16,6 +16,8 @@ const Header = () => {
   
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+    const body = document.querySelector('body');
+    body.classList.toggle('menu-open', !isMenuOpen);
   };
 
   const handleScroll = () => {
@@ -31,7 +33,7 @@ const Header = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text.trim() !== '') {
-      if (text.trim().toLowerCase() === 'home') {
+      if (text.trim() === 'home') {
         window.location.href = '/';
       } else {
         window.location.href = `/section/${text}`;
@@ -50,6 +52,12 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.remove('menu-open');
+  }, []);
+  
 
   const locale = 'en';
   const currentDate = new Date();

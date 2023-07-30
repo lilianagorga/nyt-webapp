@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/section/:section" element={<Section />} />
-          <Route path='/search' element={<Search />} />
+          <Route path="/search/:search" element={<Search />} />
         </Routes>
         <Footer />
       </div>

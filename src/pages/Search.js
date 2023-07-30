@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import SearchCard from '../components/SearchCard';
-
+import { useParams } from 'react-router-dom';
 
 
 const Search = () => {
   const [articles, setArticles] = useState([]);
-  const [term, setTerm] = useState('');
+  const { term } = useParams();
   const key = process.env.REACT_APP_NYT_API_KEY;
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Search = () => {
 
   return (
       <div>
-        <Header searchText={(text) => setTerm(text)} />
+        <Header />
         <SearchCard articles={articles} />
       </div>
   );
