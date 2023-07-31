@@ -4,8 +4,6 @@ import '../styles/home.css';
 const ArticleCardHome = ({ article, position = "", parentClass }) => {
   const { title, abstract, url } = article;
   console.log("article", article)
-  // const imageObj = multimedia && multimedia.length > 0 ? multimedia.find((item) => item.type === 'image') : null;
-  // const imageUrl = imageObj && imageObj.url ? imageObj.url : '';
 
   const retrieveImage = (article) => {
     const { multimedia } = article;

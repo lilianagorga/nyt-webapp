@@ -12,7 +12,7 @@ const ShowCard = ({ article }) => {
 
   return (
     <section>
-        <article key={_id} className='article'>
+        <article key={_id} className='show-article'>
           <img src={imageUrl} alt={main} />
           <div className='article-content'>
             <h2 className='show-main'>{main}</h2>
