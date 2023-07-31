@@ -5,7 +5,7 @@
   grid-gap: 20px;
 }
 
-.article img {
+.show-image {
   width: 100%;
   grid-row: 1 / span 2;
 }

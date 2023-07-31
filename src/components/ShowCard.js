@@ -13,7 +13,7 @@ const ShowCard = ({ article }) => {
   return (
     <section>
         <article key={_id} className='show-article'>
-          <img src={imageUrl} alt={main} />
+          <img src={imageUrl} alt={main} className='show-image' />
           <div className='article-content'>
             <h2 className='show-main'>{main}</h2>
             <p className='show-abstrat'>{abstract}</p>
