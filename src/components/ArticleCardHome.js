@@ -3,6 +3,7 @@ import '../styles/home.css';
 
 const ArticleCardHome = ({ article, position = "", parentClass }) => {
   const { title, abstract, url } = article;
+  console.log("article", article)
   // const imageObj = multimedia && multimedia.length > 0 ? multimedia.find((item) => item.type === 'image') : null;
   // const imageUrl = imageObj && imageObj.url ? imageObj.url : '';
 
@@ -29,9 +30,9 @@ const ArticleCardHome = ({ article, position = "", parentClass }) => {
 
   return (
     <section>
-      <a href={url} target="_blank" rel="noreferrer">
+      <a href={`/show/${encodeURIComponent(url)}`} className='article-link'>
         <article className="article">    
-        {imageSrc && position === 'main' && parentClass === 'main-article-inner-picture' && (
+          {imageSrc && position === 'main' && parentClass === 'main-article-inner-picture' && (
               <img src={imageSrc} alt={title} className={imgClassHome} />
           )}
 

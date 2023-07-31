@@ -23,7 +23,7 @@ const ArticleCard = ({ article, showAbstrat = true, showOriginal = true, positio
 
   return (
     <section>
-      <a href={web_url} target="_blank" rel="noreferrer">
+      <a href={`/show/${encodeURIComponent(web_url)}`} className='article-link'>
         <article key={_id} className="article">
           {position === "top-main" && imageUrl && (<img src={imageUrl} alt={main} className={imgClass} />)}
           {position === "top-main" && <h3>{main}</h3>}
