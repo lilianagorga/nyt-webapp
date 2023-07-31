@@ -1,0 +1,23 @@
+.article {
+  margin: 5rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.article img {
+  width: 100%;
+  grid-row: 1 / span 2;
+}
+
+.article-content {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.show-lead-paragraph,
+.show-abstrat,
+.show-main, 
+.show-byline {
+  padding: 1rem;
+}

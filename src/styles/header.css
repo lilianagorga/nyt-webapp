@@ -154,9 +154,9 @@ hr {
   border-top: 1px solid black;
 }
 
-span:nth-of-type(1) {
-  background-image: none;
+.stocks > span:first-of-type {
   padding-left: 0;
+  background-image: none;
 }
 
 .header.scrolled .header-top-row,
@@ -173,12 +173,12 @@ span:nth-of-type(1) {
   transition-delay: 0.1s;
 }
 
-/* .header.scrolled.active {
+.header.scrolled.active {
   border: none;
   box-shadow: none;
   transition: none;
   transition-delay: 0s;
-} */
+}
 
 
 .header.scrolled hr {
@@ -271,7 +271,7 @@ span:nth-of-type(1) {
     line-height: 1.8;
     margin-top: 3rem;
     flex-basis: 50%;
-    text-align: start;
+    text-align: center;
     margin: auto;
   }
 

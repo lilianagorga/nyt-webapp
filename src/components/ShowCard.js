@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/show.css';
 
-const ShowCard = ({ article, showAbstrat = true, showOriginal = true }) => {
+const ShowCard = ({ article }) => {
 
-  const {abstract, headline, byline, _id, multimedia} = article;
+  const {abstract, headline, byline, _id, multimedia, lead_paragraph} = article;
   const main = headline?.main || '';
   const originalByline = byline?.original || '';
   const imageObj = multimedia && multimedia.length > 0 ? multimedia.find((item) => item.type === 'image') : null;
@@ -12,10 +13,13 @@ const ShowCard = ({ article, showAbstrat = true, showOriginal = true }) => {
   return (
     <section>
         <article key={_id} className='article'>
-          <h2>{main}</h2>
-          {showAbstrat && <p>{abstract}</p>}
-          {showOriginal && <p><span>{originalByline}</span></p>}
           <img src={imageUrl} alt={main} />
+          <div className='article-content'>
+            <h2 className='show-main'>{main}</h2>
+            <p className='show-abstrat'>{abstract}</p>
+            <p className='show-lead-paragraph'>{lead_paragraph}</p>
+            <p className='show-byline'><span>{originalByline}</span></p>
+          </div>
         </article>
     </section>       
   );
