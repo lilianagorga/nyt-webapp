@@ -112,6 +112,7 @@
   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.5);
   overflow: auto;
   transition: transform 0.3s ease-in-out;
+  background-color: white;
 }
 
 .menu-list-desktop {
@@ -172,12 +173,12 @@ span:nth-of-type(1) {
   transition-delay: 0.1s;
 }
 
-.header.scrolled.active {
+/* .header.scrolled.active {
   border: none;
   box-shadow: none;
   transition: none;
   transition-delay: 0s;
-}
+} */
 
 
 .header.scrolled hr {
@@ -208,10 +209,6 @@ span:nth-of-type(1) {
 .menu-horizontal.scrolled .menu-button {
   padding-top: 0.4rem;
   padding-right: 0.2rem;
-}
-
-body.menu-open {
-  overflow: hidden;
 }
 
 @media (max-width: 1024px) {

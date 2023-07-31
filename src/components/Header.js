@@ -16,14 +16,13 @@ const Header = () => {
   
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-    const body = document.querySelector('body');
-    body.classList.toggle('menu-open', !isMenuOpen);
   };
 
   useEffect(() => {
     const body = document.querySelector('body');
-    body.classList.remove('menu-open');
-  }, []);
+    body.style.overflow = isMenuOpen && isMobile ? 'hidden' : 'auto';
+  }, [isMenuOpen, isMobile]);
+
 
   const handleScroll = () => {
     const isHeaderScrolled = window.scrollY > 0;
@@ -127,7 +126,10 @@ const Header = () => {
                         <div className="menu-icon"></div>
                         <div className="menu-icon"></div>
                       </div>
-                      <nav className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}>
+                      <nav 
+                        className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}
+                        onMouseLeave={() => setMenuOpen(false)}
+                      >
                         <ul>
                           {menuItems.map((menuItem, index) => (
                             <li key={index}>
@@ -201,7 +203,10 @@ const Header = () => {
                             <div className="menu-icon"></div>
                             <div className="menu-icon"></div>
                           </div>
-                          <nav className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}>
+                          <nav 
+                            className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}
+                            onMouseLeave={() => setMenuOpen(false)}
+                          >
                             <ul>
                               {menuItems.map((menuItem, index) => (
                                 <li key={index}>
