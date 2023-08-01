@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/home.css';
+import '../assets/styles/home.css';
 
 const ArticleCardHome = ({ article, position = "", parentClass }) => {
   const { title, abstract, url } = article;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/show.css';
+import '../assets/styles/show.css';
 
 const ShowCard = ({ article }) => {
 

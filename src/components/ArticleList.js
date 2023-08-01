@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleCard from './ArticleCard';
-import '../styles/section.css';
+import '../assets/styles/section.css';
 
 const ArticleList = ({ articles }) => {
 

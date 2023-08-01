@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleCardHome from './ArticleCardHome';
-import '../styles/home.css';
+import '../assets/styles/home.css';
 
 const ArticleListHome = ({ articles }) => {
   const sortedArticles = articles.reduce((acc, cur) => {

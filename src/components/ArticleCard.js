@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/section.css'
+import '../assets/styles/section.css';
 
 const ArticleCard = ({ article, showAbstrat = true, showOriginal = true, position = "" }) => {
   const { abstract, headline, byline, _id, multimedia, web_url } = article;

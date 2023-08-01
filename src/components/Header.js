@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import '../styles/header.css';
+import '../assets/styles/header.css';
 import menuItems from './utils/menuItems';
 import { FaSearch, FaTimes } from "react-icons/fa";
-import logoImage from '../img/nytimes.png';
-import logoScrollImage from '../img/nyt.png';
-import itemImage from '../img/item.png';
+import logoImage from '../assets/img/nytimes.png';
+import logoScrollImage from '../assets/img/nyt.png';
+import itemImage from '../assets/img/item.png';
 import { FormattedDate, IntlProvider } from 'react-intl';
 
 const Header = () => {

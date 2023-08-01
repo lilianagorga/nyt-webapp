@@ -5,7 +5,7 @@ import Search from './pages/Search';
 import Show from './pages/Show';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./styles/global.css";
+import "./assets/styles/global.css";
 
 function App() {
   return (

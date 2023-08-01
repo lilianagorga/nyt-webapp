@@ -15,10 +15,13 @@ After cloning the repository, you can run the following command to start the app
 
 
 ## Technologies Used
+* HTML
+* CSS
 * React
-* React Router
+* React Router Dom
 * Axios
-* Redux
+* React Intl
+* React Icons
 
 ## Live Deploy
 * The application will be accessible at https://nyt-webapp.netlify.app
