@@ -81,6 +81,7 @@
 
 .menu-horizontal li a {
   color: black;
+  font-size: 12px;
 }
 
 .logo {
@@ -165,21 +166,18 @@ hr {
 }
 
 .header.scrolled {
-  height: 11vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  height: 6vh;
   padding: 1rem 0.6rem 2rem; 
   border: 1px solid grey;
   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.5);
   transition: box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
   transition-delay: 0.1s;
 }
-
-.header.scrolled.active {
-  border: none;
-  box-shadow: none;
-  transition: none;
-  transition-delay: 0s;
-}
-
 
 .header.scrolled hr {
   display: none;
