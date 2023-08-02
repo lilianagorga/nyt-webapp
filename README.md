@@ -20,7 +20,6 @@ After cloning the repository, you can run the following command to start the app
 * React
 * React Router Dom
 * Axios
-* React Intl
 * React Icons
 
 ## Live Deploy

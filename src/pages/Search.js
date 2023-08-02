@@ -17,9 +17,10 @@ const Search = () => {
         } else {
           apiUrl = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&api-key=${key}`;
         }
-        const res = await fetch(apiUrl);
-        const data = await res.json();
-        console.log(data.response.docs);
+        // const res = await fetch(apiUrl);
+        // const data = await res.json();
+        // console.log(data.response.docs);
+        await fetch(apiUrl);
       } catch (error) {
         console.error(error);
       }

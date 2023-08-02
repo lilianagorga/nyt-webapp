@@ -3,7 +3,6 @@ import '../assets/styles/home.css';
 
 const ArticleCardHome = ({ article, position = "", parentClass }) => {
   const { title, abstract, url } = article;
-  console.log("article", article)
 
   const retrieveImage = (article) => {
     const { multimedia } = article;
