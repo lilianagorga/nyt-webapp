@@ -44,7 +44,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.header-middle-row .date-large-screen {
+.header-middle-row .date-desktop {
   justify-self: start;
   font-weight: bold;
   font-size: 12px;
@@ -59,7 +59,7 @@
   font-size: 14px;
 }
 
-.header-middle-row .date-large-screen,
+.header-middle-row .date-desktop,
 .header-middle-row .stocks {
   padding-top: 1.25rem;
 }
@@ -116,7 +116,7 @@
   background-color: white;
 }
 
-.menu-list-large-screen {
+.menu-list-desktop {
   width: 15.625rem;
   transform: translateX(-100%);
   border: 1px solid grey;
@@ -146,12 +146,12 @@ hr {
   border-bottom: none;
 }
 
-.hr-1-large-screen {
+.hr-1-desktop {
   border-top: 1px solid #d6d1d1;
 }
 
-.hr-2-large-screen,
-.hr-3-large-screen {
+.hr-2-desktop,
+.hr-3-desktop {
   border-top: 1px solid black;
 }
 
@@ -220,12 +220,12 @@ hr {
     display: none;
   }
 
-  .header-desktop {
+  .header-mobile {
     display: flex;
     flex-direction: column;
   }
 
-  .header-desktop-top, .header-desktop-bottom {
+  .header-mobile-top, .header-mobile-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -234,38 +234,38 @@ hr {
     padding: 0;
   }
 
-  .header-desktop-top {
+  .header-mobile-top {
     height: 12vh;
   }
 
-  .header-desktop-top-left {
+  .header-mobile-top-left {
     margin-left: 0.5rem;
   }
 
-  .header-desktop-top-middle {
+  .header-mobile-top-middle {
     width: 50%;
     margin: auto;
   }
 
-  .desktop-image-logo {
+  .mobile-image-logo {
     width: 70%;
     margin-left: 6rem;
   }
 
-  .menu-list-desktop {
+  .menu-list-mobile {
     width: 100%;
     background-color: white;
     transform: translateX(100%);
   }
 
-  .menu-list-desktop.active ul {
+  .menu-list-mobile.active ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 7rem;
   }
 
-  .menu-list-desktop.active ul > li {
+  .menu-list-mobile.active ul > li {
     line-height: 1.8;
     margin-top: 3rem;
     flex-basis: 50%;
@@ -305,37 +305,37 @@ hr {
     cursor: pointer;
   }
 
-  .header-desktop-top-right {
+  .header-mobile-top-right {
     width: 13%;
     justify-content: flex-end;
     display: flex;
     padding-right: 1rem;
   }
 
-  .header-desktop-top .item-icon-small {
+  .header-mobile-top .item-icon-small {
     width: 20%;
   }
 
-  .header-desktop-bottom {
+  .header-mobile-bottom {
     height: 6vh;
   }
 
-  .header-desktop-bottom-middle {
+  .header-mobile-bottom-middle {
     margin: auto;
   }
 
-  .date-desktop {
+  .date-mobile {
     margin-left: 8rem;
     font-weight: bold;
   }
 
-  .header-desktop-bottom-right p {
+  .header-mobile-bottom-right p {
     font-size: 12px;
     color: #326891;
     margin-right: 0.5rem;
   }
 
-  .hr-desktop {
+  .hr-mobile {
     border-top: 1px solid #d6d1d1;
   }
 }

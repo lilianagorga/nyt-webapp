@@ -11,7 +11,7 @@ import formattedDate from './utils/formattedDate';
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
-  const [isDesktop, setisDesktop] = useState(false);
+  const [ismobile, setismobile] = useState(false);
   const [text, setText] = useState('');
   
   const toggleMenu = () => {
@@ -20,8 +20,8 @@ const Header = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
-    body.style.overflow = isMenuOpen && isDesktop ? 'hidden' : 'auto';
-  }, [isMenuOpen, isDesktop]);
+    body.style.overflow = isMenuOpen && ismobile ? 'hidden' : 'auto';
+  }, [isMenuOpen, ismobile]);
 
 
   const handleScroll = () => {
@@ -30,8 +30,8 @@ const Header = () => {
   };
 
   const handleResize = () => {
-    const isDesktopView = window.innerWidth <= 1024;
-    setisDesktop(isDesktopView);
+    const ismobileView = window.innerWidth <= 1024;
+    setismobile(ismobileView);
   };
 
   const handleSubmit = (e) => {
@@ -60,18 +60,18 @@ const Header = () => {
   const currentDate = formattedDate();
 
   return (
-    <header className={`header ${isMenuOpen && isScrolled ? 'active' : ''} ${isScrolled ? 'scrolled' : ''} ${isDesktop ? 'desktop' : ''}`}>
+    <header className={`header ${isMenuOpen && isScrolled ? 'active' : ''} ${isScrolled ? 'scrolled' : ''} ${ismobile ? 'mobile' : ''}`}>
       <div className="header-container">
-        {isDesktop ? (
-          <div className="header-desktop">
-            <div className="header-desktop-top">
-              <div className='header-desktop-top-left'>
+        {ismobile ? (
+          <div className="header-mobile">
+            <div className="header-mobile-top">
+              <div className='header-mobile-top-left'>
                 <div className="menu-button" onClick={toggleMenu}>
                   <div className="menu-icon"></div>
                   <div className="menu-icon"></div>
                   <div className="menu-icon"></div>
                 </div>
-                <div className={`menu-list menu-list-desktop ${isMenuOpen ? 'active' : ''}`}>
+                <div className={`menu-list menu-list-mobile ${isMenuOpen ? 'active' : ''}`}>
                   <div className="close-icon" onClick={toggleMenu}>
                     <FaTimes />
                   </div>
@@ -92,27 +92,27 @@ const Header = () => {
                   </ul>
                 </div>
               </div>
-              <div className='header-desktop-top-middle'>
+              <div className='header-mobile-top-middle'>
                 <Link to="/">
-                  <img src={logoImage} alt="logo" className='desktop-image-logo'/>
+                  <img src={logoImage} alt="logo" className='mobile-image-logo'/>
                 </Link>
               </div>
-              <div className="header-desktop-top-right">
+              <div className="header-mobile-top-right">
                 <img src={itemImage} alt="item" className="item-icon item-icon-small" />
               </div>
             </div>
-            <hr className='hr-desktop'/>
-            <div className="header-desktop-bottom">
-              <div className="header-desktop-bottom-middle">
-                <div className="date date-desktop">
+            <hr className='hr-mobile'/>
+            <div className="header-mobile-bottom">
+              <div className="header-mobile-bottom-middle">
+                <div className="date date-mobile">
                   {currentDate}
                 </div>
               </div>
-              <div className="header-desktop-bottom-right">
+              <div className="header-mobile-bottom-right">
                 <p>SUBSCRIBE FOR €0.50/WEEK</p>
               </div>
             </div>
-            <hr className='hr-desktop'/>
+            <hr className='hr-mobile'/>
           </div>
           ) : (
             <>
@@ -125,7 +125,7 @@ const Header = () => {
                       <div className="menu-icon"></div>
                     </div>
                     <nav 
-                      className={`menu-list menu-list-large-screen ${isMenuOpen ? "active" : ""}`}
+                      className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}
                       onMouseLeave={() => setMenuOpen(false)}
                     >
                       <ul>
@@ -155,7 +155,7 @@ const Header = () => {
               </div>
 
               <div className="header-middle-row">
-                <div className="date date-large-screen">
+                <div className="date date-desktop">
                   {currentDate}
                 </div>
                 <div className="logo">
@@ -168,7 +168,7 @@ const Header = () => {
                   </span>+2% &uarr;</span>
                 </div>
               </div>
-              <hr className='hr-1-large-screen'/>
+              <hr className='hr-1-desktop'/>
               {!isScrolled && (
                 <div className="header-bottom-row">
                   <div className='menu-horizontal'>
@@ -184,8 +184,8 @@ const Header = () => {
                   </div>
                 </div>
               )}
-              <hr className='hr-2-large-screen'/>
-              <hr className='hr-3-large-screen'/>
+              <hr className='hr-2-desktop'/>
+              <hr className='hr-3-desktop'/>
               {isScrolled && (
                 <div className="header-bottom-row">
                   <div className={`menu-horizontal ${isScrolled ? 'scrolled' : ''}`}>
@@ -202,7 +202,7 @@ const Header = () => {
                           <div className="menu-icon"></div>
                         </div>
                         <nav 
-                          className={`menu-list menu-list-large-screen ${isMenuOpen ? "active" : ""}`}
+                          className={`menu-list menu-list-desktop ${isMenuOpen ? "active" : ""}`}
                           onMouseLeave={() => setMenuOpen(false)}
                         >
                           <ul>
