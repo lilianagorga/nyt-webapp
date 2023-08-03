@@ -2,24 +2,16 @@ import React from 'react';
 import '../assets/styles/footer.css'
 
 const Footer = () => {
+  const spanElements = ['NYTCo', 'Contact Us', 'Accessibility', 'Work with us', 'Advertise', 'T Brand Studio', 'Your Ad Choices', 'Privacy Policy', 'Term of Service', 'Term of Sale', 'Site Map', 'Help', 'Subscriptions'];
+
   return (
     <footer>  
       <div className='footer-container'>
         <hr />
+
         <span>Copyright &copy; 2023 New York Times</span>
-        <span>NYTCo</span>
-        <span>Contact Us</span>
-        <span>Accessibility</span>
-        <span>Work with us</span>
-        <span>Advertise</span>
-        <span>T Brand Studio</span>
-        <span>Your Ad Choices</span>
-        <span>Privacy Policy</span>
-        <span>Term of Service</span>
-        <span>Term of Sale</span>
-        <span>Site Map</span>
-        <span>Help</span>
-        <span>Subscriptions</span>
+
+        { spanElements.map((item, index) => <span key={index}>{item}</span>) }
       </div>
     </footer>
   );
