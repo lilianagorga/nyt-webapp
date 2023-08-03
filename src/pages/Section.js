@@ -29,7 +29,7 @@ const Section = () => {
 
   return (
     <div className="main-container">
-     {rateLimit ? <div>We have hit the NYT API Rate limit. Please wait 1 minute...</div> : <ArticleList articles={articles} page="section"/>}
+    {rateLimit ? <div>We have hit the NYT API Rate limit. Please wait 1 minute...</div> : <ArticleList articles={articles} page="section"/>}
     </div>
   );
 };
