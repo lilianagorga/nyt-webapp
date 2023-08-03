@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ArticleListHome from '../components/ArticleListHome';
+import RateLimit from '../components/RateLimit';
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -27,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="main-container">
-     {rateLimit ? <div>We have hit the NYT API Rate limit. Please wait 1 minute...</div> : <ArticleListHome articles={articles} page="home"/>}
+      {rateLimit ? <RateLimit /> : <ArticleListHome articles={articles} page="home" />}
     </div>
   );
 };

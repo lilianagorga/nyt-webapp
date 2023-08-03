@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ArticleList from '../components/ArticleList';
+import RateLimit from '../components/RateLimit';
 import { useParams } from 'react-router-dom';
 
 const Section = () => {
@@ -29,7 +30,7 @@ const Section = () => {
 
   return (
     <div className="main-container">
-    {rateLimit ? <div>We have hit the NYT API Rate limit. Please wait 1 minute...</div> : <ArticleList articles={articles} page="section"/>}
+    {rateLimit ? <RateLimit /> : <ArticleList articles={articles} page="section"/>}
     </div>
   );
 };

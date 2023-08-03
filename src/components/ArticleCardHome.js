@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/home.css';
 
-const ArticleCardHome = ({ article, position = "", parentClass }) => {
+const ArticleCardHome = ({ article, position = "", sectionDisplay }) => {
   const { title, abstract, url } = article;
 
   const retrieveImage = (article) => {
@@ -14,34 +14,26 @@ const ArticleCardHome = ({ article, position = "", parentClass }) => {
         return imageUrl;
   };
 
-  const createImgClassHome = () => {
-    if (position === 'main') {
-      return "img-main-home";
-    } else if (position === 'side') {
-      return 'img-side-home';
-    }
-  };
-
-  const imgClassHome = createImgClassHome();
+  const imgClassHome = `img-${position}-home`;
   const imageSrc = retrieveImage(article);
 
   return (
     <section>
       <a href={`/show/${encodeURIComponent(url)}`} className='article-link'>
         <article className="article">    
-          {imageSrc && position === 'main' && parentClass === 'main-article-inner-picture' && (
+          {imageSrc && position === 'main' && sectionDisplay === 'inner-picture' && (
               <img src={imageSrc} alt={title} className={imgClassHome} />
           )}
 
-          {position === 'main' && parentClass === 'main-article-inner-group' && <h3>{title}</h3>}
-          {position === 'main' && parentClass === 'main-article-inner-group' && <p>{abstract}</p>}
+          {position === 'main' && sectionDisplay === 'inner-group' && <h3>{title}</h3>}
+          {position === 'main' && sectionDisplay === 'inner-group' && <p>{abstract}</p>}
           
-          {imageSrc && position === 'side' && parentClass === 'side-article-inner-picture' && (
-              <img src={imageSrc} alt={title} className={imgClassHome} />
+          {imageSrc && position === 'side' && sectionDisplay === 'inner-picture' && (
+            <img src={imageSrc} alt={title} className={imgClassHome} />
           )}
 
-          {position === 'side' && parentClass === 'side-article-inner-group' && <h3>{title}</h3>}
-          {position === 'side' && parentClass === 'side-article-inner-group' && <p>{abstract}</p>}
+          {position === 'side' && sectionDisplay === 'inner-group' && <h3>{title}</h3>}
+          {position === 'side' && sectionDisplay === 'inner-group' && <p>{abstract}</p>}
         </article>
       </a>
     </section>

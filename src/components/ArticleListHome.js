@@ -35,12 +35,12 @@ const ArticleListHome = ({ articles }) => {
           <div className="main-article-group" key={index}>
             <div className="main-article-inner-group" key={index}>
               {mainArticles[section].slice(0, 2).map((article, index) => (
-                <ArticleCardHome article={article} key={index} position="main" parentClass="main-article-inner-group"/>
+                <ArticleCardHome article={article} key={index} position="main" sectionDisplay="inner-group"/>
               ))}
             </div>
             <div className='main-article-inner-picture'>
               {mainArticles[section][0] && (
-                <ArticleCardHome article={mainArticles[section][0]} key={index} position="main" parentClass="main-article-inner-picture"/>
+                <ArticleCardHome article={mainArticles[section][0]} key={index} position="main" sectionDisplay="inner-picture"/>
               )}
             </div>
           </div>
@@ -51,12 +51,12 @@ const ArticleListHome = ({ articles }) => {
           <div className="side-article-card" key={index}>
             <div className="side-article-inner-group" key={index}>
               {sideArticles[section].slice(0, 1).map((article, index) => (
-                <ArticleCardHome article={article} key={index} position="side" parentClass="side-article-inner-group"/>
+                <ArticleCardHome article={article} key={index} position="side" sectionDisplay="inner-group"/>
               ))}
             </div>
             <div className='side-article-inner-picture'>
               {sideArticles[section][0] && (
-                <ArticleCardHome article={sideArticles[section][0]} key={index} position="side" parentClass="side-article-inner-picture"/>
+                <ArticleCardHome article={sideArticles[section][0]} key={index} position="side" sectionDisplay="inner-picture"/>
               )}
             </div>
           </div>

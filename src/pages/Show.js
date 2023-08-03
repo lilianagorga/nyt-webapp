@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ShowCard from '../components/ShowCard';
+import RateLimit from '../components/RateLimit';
 
 
 
@@ -30,7 +31,7 @@ const Show = () => {
 
   return (
     <div className='main-container'>
-      {rateLimit ? <div>We have hit the NYT API Rate limit. Please wait 1 minute...</div> : <ShowCard article={article} />}
+      {rateLimit ? <RateLimit /> : <ShowCard article={article} />}
     </div>
   );
 };
