@@ -29,7 +29,7 @@ const ArticleList = ({ articles }) => {
 
       <div className="section-bottom-page">
         <div className="bottom-article-section">
-          {articles.slice(4, 10).map((article, index) => (
+          {articles.slice(4, 9).map((article, index) => (
             <div className="bottom-article-card" key={index}>
               <div className="bottom-article-inner-group" key={index}>
                 <ArticleCard article={article} key={index} position= "bottom"/>

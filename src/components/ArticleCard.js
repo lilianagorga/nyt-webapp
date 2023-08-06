@@ -41,7 +41,11 @@ const ArticleCard = ({ article, showAbstrat = true, showOriginal = true, positio
             </div>
           )}
           
-          {position === "bottom" && imageUrl && (<img src={imageUrl} alt={main} className={imgClass} />)}
+          {position === "bottom" && imageUrl && (
+            <div className={`${imgClass}-container`}>
+              <img src={imageUrl} alt={main} className={imgClass} />
+            </div>
+          )}
           {position === "bottom" && <p>{main}</p>}     
         </article>
       </a>
