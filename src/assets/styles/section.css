@@ -30,11 +30,17 @@
   padding-top: 1rem;
 }
 
-.section-bottom-page,
+.section-bottom-page {
+  display: flex;
+  justify-content: center;
+}
+
 .bottom-article-section {
   display: flex;
-  gap: 20px;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .top-side-article {
@@ -58,8 +64,15 @@
 }
 
 .bottom-article-card {
-  padding-right: 1rem;
+  padding: 15px;
   border-right: 1px solid #ddd;
+  width: 20%;
+}
+
+.img-bottom-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .bottom-article-card:last-child {
@@ -76,11 +89,15 @@
   justify-content: center;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .section-top-page {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin-top: 1rem;
+  }
+
+  .section-bottom-page {
+    padding: 1rem;
   }
 
   .section-top-page h3,
@@ -94,7 +111,7 @@
   }
 
   .section-bottom-page p {
-    font-size: 14px;
+    font-size: 1.1rem;
   }
 
   .main-article-section {
@@ -115,16 +132,10 @@
     padding-top: 1rem;
   }
 
-  .section-bottom-page {
-    padding: 1rem;
-  }
-
-  .bottom-article-section {
-    gap: 10px;
-  }
-
   .bottom-article-card {
     padding-right: 0.6rem;
+    width: 100%;
+    border-right: none;
   }
 
   .bottom-article-card:last-child {
@@ -133,6 +144,22 @@
 
   .bottom-article-inner-group p {
     margin-top: 1rem;
+  }
+
+  .bottom-article-inner-group section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+  .bottom-article-inner-group .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-bottom-container {
+    width: 100%;
   }
 }
 
@@ -155,6 +182,10 @@
     grid-template-columns: 1fr;
     padding: 0 1rem;
     margin-top: 0;
+  }
+
+  .bottom-article-inner-group section {
+    width: 90%;
   }
 
   .main-article-section {
@@ -183,14 +214,6 @@
   }
 
   .bottom-article-card {
-    padding-right: 0.4rem;
-  }
-
-  .bottom-article-card:last-child {
-    padding-right: 0;
-  }
-
-  .bottom-article-inner-group p {
-    margin-top: 0.5rem;
+    padding: 0;
   }
 }
