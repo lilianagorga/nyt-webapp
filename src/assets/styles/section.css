@@ -16,6 +16,15 @@
   gap: 10px;
 }
 
+.main-article-section h3 {
+  margin-top: 10px;
+}
+
+.main-article-section h3,
+.side-article-content h3 {
+  margin-bottom: 10px;
+}
+
 .main-article-section-group {
   border-right: 1px solid #ddd;
   padding-right: 1rem;
@@ -47,10 +56,6 @@
   display: flex;
   gap: 20px;
   align-items: center;
-}
-
-.side-article-content {
-  flex: 1;
 }
 
 .top-side-article > img {

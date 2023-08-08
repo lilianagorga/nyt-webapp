@@ -24,6 +24,10 @@ img {
   object-fit: contain;
 }
 
+/* img:hover {
+  transition: transform 0.3s ease;
+} */
+
 h3 {
   font-weight: 700;
   font-size: 18px;
@@ -55,8 +59,24 @@ a:visited {
   color: black;
 }
 
-a:hover h3 {
+.article h3 {
+  text-decoration: none;
+  transition: text-decoration 0.3ease;
+}
+
+.article:hover h3 {
+  text-decoration: underline;
   color: darkgray;
+}
+
+.img-container-home,
+.img-container-section {
+  transition: transform 0.3 ease;
+}
+
+.img-container-home:hover,
+.img-container-section:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 1300px) {

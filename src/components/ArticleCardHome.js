@@ -20,16 +20,20 @@ const ArticleCardHome = ({ article, position = "", sectionDisplay }) => {
   return (
     <section>
       <a href={`/show/${encodeURIComponent(url)}`} className='article-link'>
-        <article className="article">    
+        <article className="article">
           {imageSrc && position === 'main' && sectionDisplay === 'inner-picture' && (
+            <div className='img-container-home'>
               <img src={imageSrc} alt={title} className={imgClassHome} />
+            </div>
           )}
 
           {position === 'main' && sectionDisplay === 'inner-group' && <h3>{title}</h3>}
           {position === 'main' && sectionDisplay === 'inner-group' && <p>{abstract}</p>}
           
           {imageSrc && position === 'side' && sectionDisplay === 'inner-picture' && (
-            <img src={imageSrc} alt={title} className={imgClassHome} />
+            <div className='img-container-home'>
+              <img src={imageSrc} alt={title} className={imgClassHome} />
+            </div>
           )}
 
           {position === 'side' && sectionDisplay === 'inner-group' && <h3>{title}</h3>}
