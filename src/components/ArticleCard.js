@@ -25,7 +25,11 @@ const ArticleCard = ({ article, showAbstrat = true, showOriginal = true, positio
     <section>
       <a href={`/show/${encodeURIComponent(web_url)}`} className='article-link'>
         <article key={_id} className="article">
-          {position === "top-main" && imageUrl && (<img src={imageUrl} alt={main} className={imgClass} />)}
+          {position === "top-main" && imageUrl && (
+            <div className='img-container-section'>
+              <img src={imageUrl} alt={main} className={imgClass} />
+            </div>
+          )}
           {position === "top-main" && <h3>{main}</h3>}
           {position === "top-main" && showAbstrat && <p>{abstract}</p>}
           {position === "top-main" && showOriginal && <p><span>{originalByline}</span></p>}
@@ -37,12 +41,17 @@ const ArticleCard = ({ article, showAbstrat = true, showOriginal = true, positio
                 {showAbstrat && <p>{abstract}</p>}
                 {showOriginal && <p><span>{originalByline}</span></p>}
               </div>
-              {imageUrl && (<img src={imageUrl} alt={main} className={imgClass} />)}
+
+              {imageUrl && (
+                <div className='img-container-section'>
+                  <img src={imageUrl} alt={main} className={imgClass} />
+                </div>
+              )}
             </div>
           )}
           
           {position === "bottom" && imageUrl && (
-            <div className={`${imgClass}-container`}>
+            <div className={`${imgClass}-container img-container-section`}>
               <img src={imageUrl} alt={main} className={imgClass} />
             </div>
           )}
