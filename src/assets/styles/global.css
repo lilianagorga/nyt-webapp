@@ -66,12 +66,14 @@ a:visited {
 }
 
 .img-container-home,
-.img-container-section {
+.img-container-section,
+.img-container-show {
   transition: transform 0.3 ease;
 }
 
 .img-container-home:hover,
-.img-container-section:hover {
+.img-container-section:hover,
+.img-container-show:hover {
   transform: scale(1.05);
 }
 
