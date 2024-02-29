@@ -23,4 +23,4 @@ After cloning the repository, you can run the following command to start the app
 * React Icons
 
 ## Live Deploy
-* The application will be accessible at http://nytwebapp.lilianagorga.com
+* The application will be accessible at https://nytwebapp.lilianagorga.com
